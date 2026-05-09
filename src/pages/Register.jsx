@@ -42,7 +42,7 @@ const Register = () => {
     // or the backend handles default. For simplicity passing name, email, password.
     // Let's modify our AuthContext register method briefly if needed, but the current backend 
     // accepts it perfectly (or falls back). Actually, we'll wait - standard AuthContext only passes name, email, pwd.
-    const res = await register(name, email, password);
+    const res = await register(name, email, password, locationCoords);
     setIsSubmitting(false);
 
     if (res.success) {
